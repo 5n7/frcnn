@@ -1,0 +1,16 @@
+hydra:
+  verbose: [__main__, frcnn.viewer]
+
+defaults:
+  - hydra/hydra_logging: colorlog
+  - hydra/job_logging: colorlog
+
+basic:
+  conf: 0.9 # [0, 1] value
+  display: True
+  gpu: True
+  weights: null # null for pre-trained weights
+
+image:
+  outputs: ./images # relative path from hydra output dir
+  root: ./images
